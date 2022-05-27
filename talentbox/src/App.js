@@ -7,9 +7,24 @@ function App() {
     event.preventDefault();
     const data = new FormData(event.target);
     const values = Object.fromEntries(data.entries());
-    alert("Check console for formdata");
     console.log(values)
-  }
+
+
+
+    try {
+      let res = fetch("https://localhost:8001/v1jobs/job", {
+        method: "POST",
+        body: JSON.stringify({
+         values
+        }),
+      });
+    }
+    catch (err) {
+      console.log(err);
+    }
+    alert("Check console for formdata");
+
+  };
 
   const softwaredomain = [
     "System Software",
@@ -30,7 +45,7 @@ function App() {
           Post Job
         </b>
         <span className='form-heading' > Basic Details</span>
-        <form onSubmit={(e) => handlesubmit(e)}>
+        <form action='localhost:8001/v1jobs/job' method='POST' onSubmit={(e) => {handlesubmit(e)}}>
           <label for="Title" >
             Job Title*
           </label>
