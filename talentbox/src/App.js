@@ -130,8 +130,13 @@ function App() {
             Tags*
           </label>
           <input required placeholder='+Add tags' type='text' name='tags'></input>
-         
-          <button type='submit'>Post Job</button>
+         <div>
+         <button type='submit'>Post Job</button>
+          <button >Post Job And Add Another Job</button>
+          <button type='reset'>Cancel </button>
+       
+         </div>
+          
         </form>
       </div>
 

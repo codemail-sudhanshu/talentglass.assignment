@@ -51,10 +51,15 @@ textarea{
   resize: none;
 }
 button{
-  width: 100px;
+  /* width: 100px; */
  background-color: rgb(102, 162, 102);
 color: white;
 border: none;
 
  padding: 10px;
+}
+button:not(:nth-child(1)){
+  background-color: white;
+  color: rgb(102, 162, 102);
+  border: 1px solid rgb(102, 162, 102);
 }
